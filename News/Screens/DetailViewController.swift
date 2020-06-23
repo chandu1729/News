@@ -42,7 +42,7 @@ class DetailViewController: UIViewController {
     
     @objc func dismissVC() { dismiss(animated: true) }
     
-    private func configureUI() {
+    func configureUI() {
         view.backgroundColor = .systemBackground
         view.addSubviews(views: articleImageView, authorLabel, titleLabel, descriptionLabel, readMoreButton)
         readMoreButton.addTarget(self, action: #selector(loadWebView), for: .touchUpInside)

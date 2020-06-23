@@ -66,7 +66,7 @@ extension NewsViewController {
     
     func dismissLoadingIndicator() {
         DispatchQueue.main.async {
-            containerView.removeFromSuperview()
+            containerView?.removeFromSuperview()
             containerView = nil
         }
     }

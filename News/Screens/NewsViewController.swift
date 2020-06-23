@@ -48,7 +48,7 @@ class NewsViewController: UIViewController {
         }
     }
     
-    private func configureCollectionView() {
+     func configureCollectionView() {
         collectionView = UICollectionView(frame: view.frame,
                                           collectionViewLayout: UIHelper.createFlowLayout(in: view))
         view.addSubviews(views: collectionView)
@@ -72,7 +72,7 @@ class NewsViewController: UIViewController {
         navigationItem.searchController = searchController
     }
     
-    private func configureDatasource() {
+     func configureDatasource() {
         datasource = UICollectionViewDiffableDataSource<Section, Article>(collectionView: collectionView, cellProvider: { collectionView, indexPath, article -> UICollectionViewCell? in
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: ArticleCell.self), for: indexPath) as? ArticleCell else { return UICollectionViewCell() }
             cell.backgroundImageView.setImage(from: article.urlToImage)
